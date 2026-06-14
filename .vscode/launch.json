@@ -19,6 +19,40 @@
           "ignoreFailures": true
         }
       ]
+    },
+    {
+      "name": "Python: Current File",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Django: Run Server",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}\\manage.py",
+      "args": [
+        "runserver",
+        "127.0.0.1:8000"
+      ],
+      "django": true,
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "FastAPI: Uvicorn",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": [
+        "main:app",
+        "--reload",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8000"
+      ],
+      "console": "integratedTerminal"
     }
   ]
 }

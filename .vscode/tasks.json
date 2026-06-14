@@ -24,6 +24,36 @@
       "type": "shell",
       "command": "powershell -NoProfile -Command \"$message = Read-Host 'Commit message'; git add .; git commit -m $message\"",
       "problemMatcher": []
+    },
+    {
+      "label": "Python: Create venv",
+      "type": "shell",
+      "command": "python -m venv .venv",
+      "problemMatcher": []
+    },
+    {
+      "label": "Python: Install Django",
+      "type": "shell",
+      "command": "python -m pip install django",
+      "problemMatcher": []
+    },
+    {
+      "label": "Python: Install FastAPI",
+      "type": "shell",
+      "command": "python -m pip install fastapi uvicorn[standard]",
+      "problemMatcher": []
+    },
+    {
+      "label": "Django: Run Server",
+      "type": "shell",
+      "command": "python manage.py runserver 127.0.0.1:8000",
+      "problemMatcher": []
+    },
+    {
+      "label": "FastAPI: Run Server",
+      "type": "shell",
+      "command": "python -m uvicorn main:app --reload --host 127.0.0.1 --port 8000",
+      "problemMatcher": []
     }
   ]
 }
